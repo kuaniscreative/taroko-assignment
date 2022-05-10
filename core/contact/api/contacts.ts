@@ -12,10 +12,7 @@ export interface GetContactParams {
 export async function getContact(params: GetContactParams) {
   const {
     id
-  } = params;
-
-  console.log(id, 'params');
-  
+  } = params;  
 
   return fetch(`/api/contacts/${id}`)
     .then((res) => {
