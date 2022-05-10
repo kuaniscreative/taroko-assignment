@@ -1,0 +1,33 @@
+@use '@/theme/palette';
+@use '@/theme/typography';
+
+.root {
+  padding: 16px 32px;
+  border: 2px solid palette.get-semantic-text-color(default);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 8px 0;
+}
+
+.action-group {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 8px;
+}
+
+.name {
+  @include typography.size(h2);
+}
+
+.description {
+  @include typography.size(body1);
+
+  display: grid;
+  grid-auto-flow: row;
+  gap: 4px;
+  margin: 0 0 8px 0;
+}
