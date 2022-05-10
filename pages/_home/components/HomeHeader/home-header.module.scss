@@ -1,0 +1,35 @@
+@use '@/theme/palette';
+@use '@/theme/typography';
+@use '@/theme/responsive';
+
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 128px;
+  padding: 0 8px;
+  margin-bottom: 24px;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid palette.$gray_0;
+  background-color: palette.$white;
+  z-index: 10;
+
+  @include responsive.above(tablet) {
+    padding: 0 24px;
+  }
+
+  @include responsive.above(desktop) {
+    padding: 0 48px;
+  }
+}
+
+.brand {
+  @include typography.size(h1);
+}
+
+.btn {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
