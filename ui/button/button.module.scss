@@ -1,0 +1,45 @@
+@use '@/theme/palette';
+@use '@/theme/typography';
+@use '@/theme/animation';
+
+@mixin reset() {
+  position: relative;
+  flex-shrink: 0;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  outline: 0;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.root {
+  @include reset();
+  @include typography.size(body1);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  color: palette.get-semantic-text-color(default);
+  text-decoration: none;
+  background-color: transparent;
+  transition:
+    animation.standard(background-color, animation.$shortest-duration),
+    animation.standard(border-color, animation.$shortest-duration),
+    animation.standard(color, animation.$shortest-duration);
+
+  &:hover {
+    color: palette.get-semantic-text-color(dark);
+    background-color: palette.$primary;
+  }
+}
