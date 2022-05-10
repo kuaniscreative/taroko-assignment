@@ -49,7 +49,7 @@ $weights: (
   }
 }
 
-@mixin weight($type: normal) {
+@mixin weight($type: regular) {
   font-weight: map.get($weights, $type);
 }
 
