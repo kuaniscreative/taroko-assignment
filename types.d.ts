@@ -12,3 +12,9 @@ declare module '*.scss' {
   };
   export default classes;
 }
+
+type QueryResult<T> = {
+  statusCode: string;
+  message: string;
+  data: T;
+}
