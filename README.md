@@ -1,25 +1,24 @@
-# Next.js + Jest
+# Taroko Assignment
 
-This example shows how to configure Jest to work with Next.js.
+## Start
+Make sure you have the [server](https://github.com/resumecompanion/taroko_server) running on port 3000.
+If the server port has been changed, please sync the port number to `next.config.js`.
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
+`$ yarn dev` to start development mode, port 3030.
 
-## How to Use
+## Structure
+#### `/core` 
+This is where you put your components, hooks and utils by feature.
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
+#### `/pages`
+Each page entry. The component here utilizes other components from `/core` to compose the page.
 
-In your terminal, run the following command:
+#### `/theme`
+Design system related files live here.
 
-```bash
-npx create-next-app --example with-jest with-jest-app
-# or
-yarn create next-app --example with-jest with-jest-app
-# or
-pnpm create next-app -- --example with-jest with-jest-app
-```
+#### `/ui`
+UI components live here. Make sure they are not feature specific component, if so then they should be under `/core`.
 
-## Run Jest Tests
+#### `util`
+Helpers, utility types go here
 
-```bash
-npm test
-```
