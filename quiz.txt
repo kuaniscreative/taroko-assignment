@@ -1,0 +1,6 @@
+At the moment I cannot tell which is a better way to do event binding. 
+I am assuming this question is related to how react binds the events, so I look into the call tree. 
+There are differences, though I cannot tell which has a better performance.
+
+
+
